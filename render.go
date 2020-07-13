@@ -1,38 +1,3 @@
-// Package render is a middleware for Martini that provides easy JSON serialization and HTML template rendering.
-//
-//  package main
-//
-//  import (
-//    "encoding/xml"
-//
-//    "github.com/go-martini/martini"
-//    "github.com/martini-contrib/render"
-//  )
-//
-//  type Greeting struct {
-//    XMLName xml.Name `xml:"greeting"`
-//    One     string   `xml:"one,attr"`
-//    Two     string   `xml:"two,attr"`
-//  }
-//
-//  func main() {
-//    m := martini.Classic()
-//    m.Use(render.Renderer()) // reads "templates" directory by default
-//
-//    m.Get("/html", func(r render.Render) {
-//      r.HTML(200, "mytemplate", nil)
-//    })
-//
-//    m.Get("/json", func(r render.Render) {
-//      r.JSON(200, "hello world")
-//    })
-//
-//    m.Get("/xml", func(r render.Render) {
-//      r.XML(200, Greeting{One: "hello", Two: "world"})
-//    })
-//
-//    m.Run()
-//  }
 package render
 
 import (
@@ -41,7 +6,7 @@ import (
 	"encoding/xml"
 	"fmt"
 	"html/template"
-  "io"
+	"io"
 	"io/ioutil"
 	"net/http"
 	"os"
@@ -50,7 +15,7 @@ import (
 
 	"github.com/oxtoacart/bpool"
 
-	"github.com/go-martini/martini"
+	"github.com/straightdave/martini"
 )
 
 const (
@@ -154,6 +119,15 @@ func Renderer(options ...Options) martini.Handler {
 	cs := prepareCharset(opt.Charset)
 	t := compile(opt)
 	bufpool = bpool.NewBufferPool(64)
+
+	// ** NOTE **
+	//
+	// Here creates a hard dependency on martini package.
+	// It will call *THAT* martini's MapTo, injecting render to
+	// *THAT* martini package instance.
+	// So if someday there's another martini package instance,
+	// that custom martini will not find this render.
+	//
 	return func(res http.ResponseWriter, req *http.Request, c martini.Context) {
 		var tc *template.Template
 		if martini.Env == martini.Dev {

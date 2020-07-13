@@ -9,7 +9,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/go-martini/martini"
+	"github.com/straightdave/martini"
 )
 
 type Greeting struct {
@@ -26,7 +26,7 @@ type GreetingXML struct {
 func Test_Render_JSON(t *testing.T) {
 	m := martini.Classic()
 	m.Use(Renderer(Options{
-	// nothing here to configure
+		// nothing here to configure
 	}))
 
 	// routing
@@ -93,7 +93,7 @@ func Test_Render_Indented_JSON(t *testing.T) {
 func Test_Render_XML(t *testing.T) {
 	m := martini.Classic()
 	m.Use(Renderer(Options{
-	// nothing here to configure
+		// nothing here to configure
 	}))
 
 	// routing
@@ -351,7 +351,7 @@ func Test_Render_Delimiters(t *testing.T) {
 func Test_Render_BinaryData(t *testing.T) {
 	m := martini.Classic()
 	m.Use(Renderer(Options{
-	// nothing here to configure
+		// nothing here to configure
 	}))
 
 	// routing
@@ -372,7 +372,7 @@ func Test_Render_BinaryData(t *testing.T) {
 func Test_Render_BinaryData_CustomMimeType(t *testing.T) {
 	m := martini.Classic()
 	m.Use(Renderer(Options{
-	// nothing here to configure
+		// nothing here to configure
 	}))
 
 	// routing

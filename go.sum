@@ -1,0 +1,10 @@
+github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
+github.com/oxtoacart/bpool v0.0.0-20190530202638-03653db5a59c h1:rp5dCmg/yLR3mgFuSOe4oEnDDmGLROTvMragMUXpTQw=
+github.com/oxtoacart/bpool v0.0.0-20190530202638-03653db5a59c/go.mod h1:X07ZCGwUbLaax7L0S3Tw4hpejzu63ZrrQiUe6W0hcy0=
+github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
+github.com/straightdave/inject v0.0.0-20200709050304-1608f4f036d5 h1:puUrb3uzWJJkbwNT1MbjUTBcO+M3CLHI/RaF+81giKM=
+github.com/straightdave/inject v0.0.0-20200709050304-1608f4f036d5/go.mod h1:3VHAHD57pO0EwNbyMb/XHmBP5wGfWp1A7Bd2RD+Bq08=
+github.com/straightdave/martini v0.0.0-20200709081023-677d691b8af5 h1:rLhFXeiQUnSjsyC4cPsf7i2EFeb6kF1MDoD9bBLV8M8=
+github.com/straightdave/martini v0.0.0-20200709081023-677d691b8af5/go.mod h1:eKFyNqTSAIWGFm22WWIcsTfKtogauipMY2K+UlQLs+Q=
+github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
+github.com/stretchr/testify v1.3.0/go.mod h1:M5WIy9Dh21IEIfnGCwXGc5bZfKNJtfHm1UVUgZn+9EI=
